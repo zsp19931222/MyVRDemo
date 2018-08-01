@@ -1,0 +1,39 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    defaultConfig {
+        applicationId "com.zsp.myvrdemo"
+        minSdkVersion 23
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    repositories {
+        flatDir {
+            dirs 'libraries'   // aar目录
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.2'
+    compile 'com.google.protobuf.nano:protobuf-javanano:3.0.0-alpha-7'
+    compile(name: 'sdk-audio-1.150.0', ext: 'aar')
+    compile(name: 'sdk-base-1.150.0', ext: 'aar')
+    compile(name: 'sdk-common-1.150.0', ext: 'aar')
+    compile(name: 'sdk-commonwidget-1.150.0', ext: 'aar')
+    compile(name: 'sdk-controller-1.150.0', ext: 'aar')
+    compile(name: 'sdk-panowidget-1.150.0', ext: 'aar')
+    compile(name: 'sdk-videowidget-1.150.0', ext: 'aar')
+}
