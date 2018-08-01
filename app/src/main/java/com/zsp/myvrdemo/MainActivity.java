@@ -25,7 +25,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //A 对VR控件初始化   ctrl+alt+f 抽取成员变量
         mVrPanoramaView =findViewById(R.id.vr);
 
         // 隐藏掉VR效果左下角的信息按钮显示
