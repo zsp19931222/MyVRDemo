@@ -24,7 +24,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         mVrPanoramaView =findViewById(R.id.vr);
 
         // 隐藏掉VR效果左下角的信息按钮显示
